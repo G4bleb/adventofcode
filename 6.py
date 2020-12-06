@@ -8,7 +8,7 @@ def resolvePart1():
     paragraphs = f.read().split('\n\n')
     for paragraph in paragraphs:
         paragraph = paragraph.replace('\n', '')
-        count += len(list(dict.fromkeys(paragraph)))
+        count += len(dict.fromkeys(paragraph))
     return count
 
 
@@ -23,4 +23,4 @@ def resolvePart2():
     return count
 
 
-print(resolvePart1())
+print(resolvePart2())
