@@ -19,7 +19,7 @@ def resolvePart2():
     for paragraph in paragraphs:
         n_people = paragraph.count('\n') + 1
         for letter in string.ascii_lowercase:
-            count += n_people == len(re.findall(f"[{letter}]", paragraph))
+            count += n_people == len(re.findall(letter, paragraph))
     return count
 
 
