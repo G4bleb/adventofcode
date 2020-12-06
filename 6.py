@@ -1,5 +1,4 @@
 import string
-import re
 
 
 def resolvePart1():
@@ -19,7 +18,7 @@ def resolvePart2():
     for paragraph in paragraphs:
         n_people = paragraph.count('\n') + 1
         for letter in string.ascii_lowercase:
-            count += n_people == len(re.findall(letter, paragraph))
+            count += n_people == paragraph.count(letter)
     return count
 
 
