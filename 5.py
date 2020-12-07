@@ -21,6 +21,7 @@ def getSeatId(seat_str):
 def resolvePart1():
     f = open('5', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     highest = 0
     for line in lines:
         highest = max(highest, getSeatId(line))
@@ -30,6 +31,7 @@ def resolvePart1():
 def resolvePart2():
     f = open('5', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     seat_ids = []
     for line in lines:
         seat_ids.append(getSeatId(line))

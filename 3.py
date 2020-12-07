@@ -3,12 +3,14 @@
 def resolvePart1():
     f = open('3', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     return checkSlope(lines, 3)
 
 
 def resolvePart2():
     f = open('3', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     result = checkSlope(lines, 1)
     result *= checkSlope(lines, 3)
     result *= checkSlope(lines, 5)

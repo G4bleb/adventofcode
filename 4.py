@@ -24,6 +24,7 @@ def passport_from_paragraph(paragraph):
 def resolvePart1():
     f = open('4', 'r')
     paragraphs = f.read().split('\n\n')
+    f.close()
     validcount = 0
     for paragraph in paragraphs:
         passport = passport_from_paragraph(paragraph)
@@ -35,6 +36,7 @@ def resolvePart1():
 def resolvePart2():
     f = open('4', 'r')
     paragraphs = f.read().split('\n\n')
+    f.close()
     validcount = 0
     for paragraph in paragraphs:
         passport = passport_from_paragraph(paragraph)

@@ -12,6 +12,7 @@ def bagAndItsContainersTypes(bags_containers, contained_name, bag_types):
 def resolvePart1():
     f = open('7', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     bags_containers = {}
     for line in lines:
         matches = re.findall(r"(?:^|\d+)([a-z ]+?)bag", line)
@@ -37,6 +38,7 @@ def countContainedBagsIncludingThisOne(container_name, bags_contents):
 def resolvePart2():
     f = open('7', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     bags_contents = {}
     for line in lines:
         matches = re.findall(r"(^|\d+)([a-z ]+?)bag", line)

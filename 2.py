@@ -3,6 +3,7 @@
 def resolvePart1():
     f = open('2', 'r')
     lines = f.readlines()
+    f.close()
     rightcount = 0
     for line in lines:
         numbers, chkletter, pw = line.split(' ')
@@ -20,6 +21,7 @@ def resolvePart1():
 def resolvePart2():
     f = open('2', 'r')
     lines = f.readlines()
+    f.close()
     rightcount = 0
     for line in lines:
         numbers, chkletter, pw = line.strip().split(' ')
