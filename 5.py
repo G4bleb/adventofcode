@@ -41,4 +41,5 @@ def resolvePart2():
             return seat_id+1
 
 
+print(resolvePart1())
 print(resolvePart2())

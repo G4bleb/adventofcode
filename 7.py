@@ -50,4 +50,5 @@ def resolvePart2():
     return countContainedBagsIncludingThisOne('shiny gold', bags_contents)-1
 
 
+print(resolvePart1())
 print(resolvePart2())

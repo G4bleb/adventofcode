@@ -27,4 +27,5 @@ def checkSlope(lines, right, down=1):
     return treecount
 
 
+print(resolvePart1())
 print(resolvePart2())

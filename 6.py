@@ -22,4 +22,5 @@ def resolvePart2():
     return count
 
 
+print(resolvePart1())
 print(resolvePart2())

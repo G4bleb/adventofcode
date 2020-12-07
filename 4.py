@@ -66,4 +66,5 @@ def resolvePart2():
     return validcount
 
 
+print(resolvePart1())
 print(resolvePart2())

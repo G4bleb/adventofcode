@@ -30,4 +30,5 @@ def resolvePart2():
     return rightcount
 
 
+print(resolvePart1())
 print(resolvePart2())
