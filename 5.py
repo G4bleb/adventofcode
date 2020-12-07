@@ -8,11 +8,11 @@ def splitListInHalf(to_split, keep_lower_half):
 
 def getSeatId(seat_str):
     possible_rows = list(range(128))
-    for rowchar in line[:7]:
+    for rowchar in seat_str[:7]:
         possible_rows = splitListInHalf(possible_rows, rowchar == 'F')
     row = possible_rows[0]
     possible_cols = list(range(8))
-    for colchar in line[7:]:
+    for colchar in seat_str[7:]:
         possible_cols = splitListInHalf(possible_cols, colchar == 'L')
     col = possible_cols[0]
     return row*8+col
