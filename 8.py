@@ -1,6 +1,7 @@
 def resolvePart1():
     f = open('8', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     executed = {}
     i, acc = 0, 0
     while i < len(lines) and not executed.setdefault(i, False):
@@ -43,6 +44,7 @@ def replaceElem(input_list, index, elem):
 def resolvePart2():
     f = open('8', 'r')
     lines = [line.strip() for line in f.readlines()]
+    f.close()
     i = 0
     while i < len(lines):
         cmd, val = lines[i].split(' ')
