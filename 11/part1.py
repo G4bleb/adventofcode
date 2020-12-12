@@ -1,16 +1,18 @@
+import common
+
+
 def resolvePart1():
     f = open('11', 'r')
     lines = [list(line.strip()) for line in f.readlines()]
     f.close()
-
-    tmp = iterate(lines)
+    tmp = iteratePart1(lines)
     while tmp != lines:
         lines = tmp
-        tmp = iterate(lines)
-    return countOccupied(lines)
+        tmp = iteratePart1(lines)
+    return common.countOccupied(lines)
 
 
-def iterate(lines):
+def iteratePart1(lines):
     nextlines = lines.copy()
     for i in range(len(lines)):
         nextlines[i] = lines[i].copy()
@@ -23,10 +25,6 @@ def iterate(lines):
             else:
                 nextlines[i][j] = lines[i][j]
     return nextlines
-
-
-def printLines(lines):
-    print('\n'.join([''.join(line) for line in lines]), end='\n\n')
 
 
 def adjacentSeatsFree(lines, i, j):
@@ -60,13 +58,6 @@ def occupied(lines, i, j):
         return lines[i][j] == '#'
     else:
         return False
-
-
-def countOccupied(lines):
-    count = 0
-    for line in lines:
-        count += line.count('#')
-    return count
 
 
 print(resolvePart1())
