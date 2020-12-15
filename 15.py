@@ -25,5 +25,5 @@ def solve(playing, end):
     return consider
 
 
-print(solvePart1([11, 18, 0, 20, 1, 7, 16], 2020))
-print(solvePart1([11, 18, 0, 20, 1, 7, 16], 30000000))
+print(solve([11, 18, 0, 20, 1, 7, 16], 2020))
+print(solve([11, 18, 0, 20, 1, 7, 16], 30000000))
