@@ -8,7 +8,7 @@ def resolvePart1():
     for adapter in lines:
         diff = adapter - joltage
         diff_cnt[diff-1] += 1
-        joltage += diff
+        joltage = adapter
     diff_cnt[2] += 1
     return diff_cnt[0]*diff_cnt[2]
 
