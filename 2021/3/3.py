@@ -41,8 +41,7 @@ def solve2():
             i += 1
             o2_criteria = oxygen_generator_criteria(o2_rating_list, i)
             o2_rating_list = list(filter(lambda x: int(x[i]) == o2_criteria, o2_rating_list))
-        o2_rating_binary = list(map(int, o2_rating_list[0]))
-        o2_rating = binary_to_int(o2_rating_binary)
+        o2_rating = int(o2_rating_list[0], 2)
 
         # Compute co2 rating
         co2_rating_list = list(filter(lambda x: int(x[0]) == co2_criteria, lines))
@@ -51,8 +50,7 @@ def solve2():
             i += 1
             co2_criteria = int(not oxygen_generator_criteria(co2_rating_list, i))
             co2_rating_list = list(filter(lambda x: int(x[i]) == co2_criteria, co2_rating_list))
-        co2_rating_binary = list(map(int, co2_rating_list[0]))
-        co2_rating = binary_to_int(co2_rating_binary)
+        co2_rating = int(co2_rating_list[0], 2)
 
         print(o2_rating*co2_rating)
 
