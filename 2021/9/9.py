@@ -80,5 +80,5 @@ def solve2():
         print(answer)
 
 
-# solve1()
+solve1()
 solve2()
