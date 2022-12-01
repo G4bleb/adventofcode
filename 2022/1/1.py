@@ -24,7 +24,7 @@ def solve2():
     with open('input.txt', 'r') as f:
         lines = list(f.readlines())
 
-    elves: list[str] = []
+    elves: list[int] = []
     curr_elf = 0
     for line in lines:
         if line == '\n':
