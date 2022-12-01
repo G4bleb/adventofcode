@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+
+import bisect
+
+
+def solve1():
+    with open('input.txt', 'r') as f:
+        lines = list(f.readlines())
+
+    maxelf = 0
+    tmp = 0
+    for line in lines:
+        if line == '\n':
+            maxelf = max(tmp, maxelf)
+            tmp = 0
+        else:
+            tmp += int(line)
+    maxelf = max(tmp, maxelf)
+
+    print(maxelf)
+
+
+def solve2():
+    with open('input.txt', 'r') as f:
+        lines = list(f.readlines())
+
+    elves: list[str] = []
+    currElf = 0
+    for line in lines:
+        if line == '\n':
+            bisect.insort(elves, currElf)
+            currElf = 0
+        else:
+            currElf += int(line)
+
+    print(sum(elves[-3:]))
+
+
+solve1()
+solve2()
