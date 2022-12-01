@@ -32,6 +32,7 @@ def solve2():
             curr_elf = 0
         else:
             curr_elf += int(line)
+    bisect.insort(elves, curr_elf)
 
     print(sum(elves[-3:]))
 
