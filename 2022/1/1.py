@@ -25,13 +25,13 @@ def solve2():
         lines = list(f.readlines())
 
     elves: list[str] = []
-    currElf = 0
+    curr_elf = 0
     for line in lines:
         if line == '\n':
-            bisect.insort(elves, currElf)
-            currElf = 0
+            bisect.insort(elves, curr_elf)
+            curr_elf = 0
         else:
-            currElf += int(line)
+            curr_elf += int(line)
 
     print(sum(elves[-3:]))
 
