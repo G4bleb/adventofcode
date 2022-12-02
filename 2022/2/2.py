@@ -14,7 +14,7 @@ def solve1():
     with open('input.txt', 'r') as f:
         my_score = 0
         while line := f.readline():
-            game = line.strip()
+            game = line.rstrip()
             my_score += outcomes[game]
     print(my_score)
 
@@ -35,7 +35,7 @@ def solve2():
     with open('input.txt', 'r') as f:
         my_score = 0
         while line := f.readline():
-            game = line.strip()
+            game = line.rstrip()
             my_score += outcomes[game]
     print(my_score)
 
