@@ -56,10 +56,14 @@ class TreeMap:
         return visible_trees
 
     def scenic_score(self, x, y) -> int:
-        right = self.bigger_tree_right(x, y) if self.bigger_tree_right(x, y) else self.width - x - 1
-        left = self.bigger_tree_left(x, y) if self.bigger_tree_left(x, y) else x
-        top = self.bigger_tree_top(x, y) if self.bigger_tree_top(x, y) else y
-        down = self.bigger_tree_down(x, y) if self.bigger_tree_down(x, y) else self.height - y - 1
+        tmp = self.bigger_tree_right(x, y)
+        right = tmp if tmp else self.width - x - 1
+        tmp = self.bigger_tree_left(x, y)
+        left = tmp if tmp else x
+        tmp = self.bigger_tree_top(x, y)
+        top = tmp if tmp else y
+        tmp = self.bigger_tree_down(x, y)
+        down = tmp if tmp else self.height - y - 1
         return right*left*top*down
 
     def best_scenic_score(self) -> int:
