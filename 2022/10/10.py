@@ -15,7 +15,7 @@ class CPU:
             self.part_1_answer += self.cycles * self.x
 
         if self.crt:
-            if not (self.cycles-1) % 40:
+            if self.cycles % 40 == 1:
                 print()
             if self.x <= self.cycles % 40 <= self.x+2:
                 print('#', end='')
