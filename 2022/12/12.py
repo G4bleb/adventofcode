@@ -110,4 +110,5 @@ def solve2():
         current = min(unvisited_nodes, key=lambda n: n.tentative_distance)
 
 
+solve1()
 solve2()
