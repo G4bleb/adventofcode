@@ -2,7 +2,7 @@ import json
 from functools import cmp_to_key
 
 
-def compare(l, r):
+def compare(l: int | list, r: int | list) -> 1 | -1 | str:
     if isinstance(l, int) and isinstance(r, int):
         if l == r:
             return 'continue'
@@ -15,7 +15,7 @@ def compare(l, r):
         if len(r) != len(l):
             return -1 if len(r) > len(l) else 1
         return 'continue'
-    # One is an integer
+    # One of them is an integer, the other is a list
     if isinstance(l, int):
         l = [l]
     else:
@@ -23,7 +23,7 @@ def compare(l, r):
     return compare(l, r)
 
 
-def solve1():
+def solve1() -> None:
     packet_pair: list[list] = [[],  []]
     i = 0
     res = 0
@@ -40,7 +40,7 @@ def solve1():
     print(res)
 
 
-def solve2():
+def solve2() -> None:
     packets = []
     with open('input.txt', 'r') as f:
         while line := f.readline():
